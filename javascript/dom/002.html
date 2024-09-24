@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dom</title>
+</head>
+<body>
+   <div class="parent">
+      <!-- comment(for child nodes ) -->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+      <div class="day">Satuarday</div>
+   </div>
+</body>
+
+<script>
+   const par1 =  document.querySelector('.parent')
+   // console.log(par1);
+   // console.log(par1.children)
+   // console.log(par1.children[1].innerHTML);
+   
+   
+   
+   // for (let i = 0; i < par1.children.length; i++) {
+   //    console.log(par1.children[i].innerHTML);
+      
+   // }
+
+   par1.children[1].style.color="salmon";
+   // console.log(par1.firstElementChild);
+   // console.log(par1.lastElementChild);
+
+   const day1 = document.querySelector('.day');
+   console.log(day1);
+   console.log(day1.parentElement);
+   console.log(day1.nextElementSibling);
+
+   console.log("nodes: ",par1.childNodes);
+   
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>How to create element in dom</title>
+</head>
+<body style="background-color: #1e1e1e;   color: #fff;">
+   
+   <ul class="language">
+      <li>JavaScript</li>
+   </ul>
+
+</body>
+
+<script>
+   /*
+   const div1 = document.createElement('div');
+   console.log(div1);
+
+   div1.className="main";
+   // div1.id="myId";
+   div1.id=Math.round(Math.random()*10+1);
+
+   div1.setAttribute("title","generate title")
+
+   div1.style.backgroundColor="green"
+   div1.style.padding="12px";
+   div1.style.fontSize="40px"
+
+   // div1.innerHTML="created element using dom";
+
+   /* WE USE BOTH ABOVE WALA aur BELOW WALA (use below wala more optimise)*/
+   /*
+   const addText1 = document.createTextNode("written using dom and created div using dom");
+
+   div1.appendChild(addText1);
+   document.body.appendChild(div1);
+   */
+
+   // how to edit element using dom :-  34
+
+   // basic approach
+   function addLanguage(langName){
+      const li  = document.createElement('li');
+      li.innerHTML=`${langName}`;
+      document.querySelector('.language').appendChild(li);
+   }
+   addLanguage("python");
+   addLanguage("ruby");
+
+   // optimised approach(but using 1 extra variable)
+
+   function addOptimiseLangUsing1ExtraVar(langName){
+      const li = document.createElement('li');
+      const addText= document.createTextNode(langName);
+      li.appendChild(addText);
+      document.querySelector('.language').appendChild(li);
+   }
+   addOptimiseLangUsing1ExtraVar("java")
+
+   // optimised approach(must use this )
+
+   function addOptimiseLang(langName){
+      const li = document.createElement('li');
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector('.language').appendChild(li);
+   }
+
+   addOptimiseLang("golang");
+
+   //edit value
+   // typ1 1  we can use this way to eidt but this takes more time
+   const select_Nth_Child= document.querySelector("li:nth-child(2)");
+   select_Nth_Child.innerHTML="MOJO";
+
+   const select_Nth_Child_Optimise = document.querySelector("li:nth-child(3)");
+   const newLi= document.createElement('li');
+   newLi.textContent="C++";
+   select_Nth_Child_Optimise.replaceWith(newLi);
+
+
+   // way 3 to edit
+   const firstChild = document.querySelector("li:first-child");
+   firstChild.outerHTML='<li>TypeScript</li>';
+
+   //remove
+   
+   const remove = document.querySelector('li:last-child');
+   remove.remove();
+
+
+</script>
+
+</html>
