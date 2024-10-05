@@ -67,7 +67,7 @@ form.addEventListener('submit', function (evnt) {
 });
 ```
 
- 
+## project 3 - Digital Clock
 ``` javaScript
 
 const clock = document.getElementById('clock');
@@ -123,7 +123,7 @@ setInterval(function () {
 </html>
 ```
 
-
+## project 5 - keyboard
 ``` javascript project 5
 
 console.log('Project 5');
@@ -152,7 +152,7 @@ window.addEventListener('keydown',function (e){
 ```
 
 
-
+## project 5 - unlimited color change
 ``` javascript //project 6 not working
 const randomColor = function () {
   const hex = '0123456789ABCDEF';
