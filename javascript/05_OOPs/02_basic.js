@@ -29,14 +29,15 @@ function  user(username,loginCount,isLoggedIn){
     return this;
 }
 
-/*
+
 
 const user01= user("fazle",12,true);
 console.log(user01);
 
 const user02 = user("chaiAurCode",11,false);
-console.log(user01);
+console.log(user01); 
 
+/*
 
 const user03= new user("fazle",12,true);
 console.log(user03);

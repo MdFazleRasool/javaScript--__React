@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/" aria-current="page">Hpme</a>
+        <a href="https://www.youtube.com" target="_blank"  >Youtube channel</a>
+    </nav>
+    <div class="project">
+        <div id="insert">
+            <div class="key">Press the key and watch the magic </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+        
+        const insert = document.getElementById('insert');
+        window.addEventListener('keydown',function(e){
+            insert.innerHTML=`
+            <div class="color">
+                <table>
+                    <tr>
+                        <th>Key </th>
+                        <th>Keycode</th>
+                        <th>Code</th>
+                    </tr>
+                    <tr>
+                        <td>${e.Key === ' ' ? 'space' : e.key}</td>
+                        <td>${e.Keycode}</td>
+                        <td>${e.Code}</td>
+                    </tr>
+                    
+                </table>    
+            </div>
+            
+            
+            `
+            
+        })
+
+
+
+</script>
+</html>

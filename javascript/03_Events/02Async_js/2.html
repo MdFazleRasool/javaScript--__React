@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd </title>
+</head>
+<body>
+    <h1>MD FAZLE RASOOL</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+
+<Script>
+    // setInterval(function(){
+    //     console.log("fazle",99999999999000);
+        
+    // });
+ 
+ 
+    // project 1
+    const sayDate =   function(str){
+        console.log(str,Date.now());
+        
+    };
+    const intervaId = setInterval(sayDate,1000,"jio");
+    clearInterval(intervaId);
+
+
+    // project 2
+    const randomColor = function () {
+      const hex = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    };
+    
+    let intervalId;
+    const startChangingColor = function () {
+      if(!intervaId){
+        intervalId = setInterval(changeBgColor, 1000);
+      }
+      function changeBgColor() {
+        document.body.style.backgroundColor = randomColor();
+      }
+    };
+    console.log(randomColor());
+    document.querySelector('#start').addEventListener('click', startChangingColor);
+
+    const stopChangingColor = function () {
+      clearInterval(intervalId);
+      intervalId=null;
+    };
+
+    document.querySelector('#stop').addEventListener('click', stopChangingColor);
+</Script>
+
+</html>

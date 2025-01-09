@@ -82,6 +82,8 @@ setInterval(function () {
 
 ```
 
+
+## project 4 - Number Guessing Game
 ``` javascript 
 <!DOCTYPE html>
 <html lang="en">
@@ -123,6 +125,7 @@ setInterval(function () {
 </html>
 ```
 
+
 ## project 5 - keyboard
 ``` javascript project 5
 
@@ -152,7 +155,9 @@ window.addEventListener('keydown',function (e){
 ```
 
 
-## project 5 - unlimited color change
+
+
+## project 6 - unlimited color change
 ``` javascript //project 6 not working
 const randomColor = function () {
   const hex = '0123456789ABCDEF';

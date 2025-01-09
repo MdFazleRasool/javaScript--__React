@@ -1,3 +1,6 @@
+
+
+
 // fetch('https://something.com').then().catch().finally()
 /*
 const promiseOne = new Promise(function (resolve, reject) {
@@ -9,9 +12,12 @@ const promiseOne = new Promise(function (resolve, reject) {
   }, 1000);
 });
 
-promiseOne.then(function () {
+promiseOne.then(function () { // then -> resolve karna
   console.log("promise consumed");
 });
+
+
+
 
 new Promise(function (resolve, reject) {
   setTimeout(function () {
@@ -21,6 +27,8 @@ new Promise(function (resolve, reject) {
 }).then(function () {
   console.log("Async 2 resolved");
 });
+
+
 
 const promiseThree = new Promise(function (resolve, reject) {
   setTimeout(function () {
@@ -42,8 +50,10 @@ const promisefour = new Promise(function (resolve, reject) {
     }
   }, 1000);
 });
+
 */
 
+//this is not the right way of using then
 /*
 const username01=promisefour.then((user)=>{
     console.log(user);
@@ -51,10 +61,10 @@ const username01=promisefour.then((user)=>{
 });
 console.log(username01);
  this is not the right way
- */
+*/
 
+/*
 
- /*
 promisefour
   .then((user) => {
     console.log(user);
@@ -67,18 +77,22 @@ promisefour
     console.log(error);
   })
   .finally(() => console.log("The promise is either resolved or rejected"));
+  // finally always get executed.
+  
 
-const promisefive = new Promise((resolve, reject) => {
-  setTimeout(function () {
-    let error = false;
-    // let error = true;
-    if (!error) {
-      resolve({username:"mfrasool",password:"123"})
-    } else {
-      reject("error : something went wrong");
-    }
-  }, 1000);
-});
+
+
+  const promisefive = new Promise((resolve, reject) => {
+    setTimeout(function () {
+      let error = false;
+      // let error = true;
+      if (!error) {
+        resolve({username:"mfrasool",password:"123"})
+      } else {
+        reject("error : something went wrong");
+      }
+    }, 1000);
+  });
 
 async function consumepromisefive() {
     try{
@@ -97,11 +111,12 @@ consumepromisefive()
 
 async function getAllUsers() {
   try{
-  const response = await fetch('https://jsonplaceholder.typicode.com/users');
-  console.log(typeof  response);
-  const data= await response.json();
-  console.log(data);
-  console.log(typeof data);
+
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    console.log(typeof  response);
+    const data= await response.json();
+    console.log(data);
+    console.log(typeof data);
   }
   catch(error){
     console.log("E: ",error);
@@ -122,3 +137,5 @@ fetch('https://jsonplaceholder.typicode.com/users')
   
 })
 .catch((error) => console.log(error));
+/*
+*/

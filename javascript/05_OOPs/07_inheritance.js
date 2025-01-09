@@ -11,7 +11,7 @@ class   user{
 
 class Teacher extends user {
     constructor(username,email,password){
-        super(username);
+        super(username); // this behind the scene jayega
         this.email=email;
         this.password=password;
     }
@@ -27,6 +27,8 @@ faz.addCourse();
 
 const masalachai = new user("masalachai");
 masalachai.logMe();
+
+// masalachai.addCourse(); // not available
 
 faz.logMe();
 

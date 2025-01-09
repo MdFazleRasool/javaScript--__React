@@ -1,11 +1,11 @@
-/*
+/* 
 let myName = "fazle    ";
 let myName2 = "fazle Rasool    ";
 console.log(myName.length);
 console.log(myName.trueLength);
-*/
 
-/* 
+
+
 let MyHero = ["thor","ironman","spiderman"];
 
 let heroPower = {
@@ -30,9 +30,10 @@ Array.prototype.ArrayFazle = function (){
     console.log(`hey fazle array and protoype`);
 }
 MyHero.ArrayFazle();
-// heroPower.ArrayFazle();
+// heroPower.ArrayFazle(); // don't have access in heropower because it is only provided in Array
 
 */ 
+
 
 /*  Inheritance */
 
@@ -75,3 +76,4 @@ anotherusername.truelength();
 
 "fazle".truelength();
 "coldCoffee".truelength();
+

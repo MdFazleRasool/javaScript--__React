@@ -15,7 +15,7 @@ class   user{
 
 const fazle = new user("mfrasool");
 fazle.logMe();
-// console.log(fazle.createId());
+// console.log(fazle.createId());  // not available for you
 
 
 class teacher extends user{

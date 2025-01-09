@@ -1,4 +1,6 @@
-/* 
+// ES6
+
+
 class   user{
     constructor(username, email, password){
         this.username=username;
@@ -15,16 +17,16 @@ class   user{
     }
 }
 
-const chai = new user("chai","chai@gmail.com",123);
-console.log(chai.encryptPassword());
-console.log(chai.changeUsername());
+// const chai = new user("chai","chai@gmail.com",123);
+// console.log(chai.encryptPassword());
+// console.log(chai.changeUsername());
 
 
-console.log(chai);
+// console.log(chai);
 
-*/ 
+//*/ 
 
-//behind the scene
+//behind the scene :- agar class nhi hota to kaise karte 
 
 
 function user001(username, email, password){
@@ -46,3 +48,4 @@ const tea = new user001("tea","chai@gmail.com",123);
 console.log(tea.encryptPassword());
 console.log(tea.changeUsername());
 
+/**/

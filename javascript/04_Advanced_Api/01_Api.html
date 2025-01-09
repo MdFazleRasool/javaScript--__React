@@ -12,7 +12,7 @@
 
         0	    UNSENT	                Client has been created. open() not called yet.
         1	    OPENED	                open() has been called.
-        2	    HEADERS_RECEIVED	        send() has been called, and headers and status are available.
+        2	    HEADERS_RECEIVED	    send() has been called, and headers and status are available.
         3	    LOADING	                Downloading; responseText holds partial data.
         4	    DONE	                The operation is complete.
 
@@ -22,10 +22,10 @@
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
     const xhr = new XMLHttpRequest();
     xhr.open('GET',requestUrl);
-    xhr.onreadystatechange = function(){
+    xhr.onreadystatechange = function(){  //onreadystatechange -  on track state change continuously
         console.log(xhr.readyState);
         if(xhr.readyState === 4){
-            const data = JSON.parse(this.responseText);
+            const data = JSON.parse(this.responseText); // reasponse String mai ata hai most of the time snd convert to json - object ban jayega 
             console.log(data.followers);
             console.log(data);
             console.log(typeof data);
