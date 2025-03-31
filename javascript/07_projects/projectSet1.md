@@ -1,7 +1,6 @@
 #projects related to DOM
 
-## Project LINK
-https://stackblitz.com/edit/dom-project-chaiaurcode-brsvkr?file=1-colorChanger%2Fstyle.css,1-colorChanger%2Findex.html,1-colorChanger%2Fchaiaurcode.js
+
 
 
 ## Project 1
