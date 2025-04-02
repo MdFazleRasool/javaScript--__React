@@ -5,6 +5,7 @@
 
 ## Project 1
 ```JavaScript
+
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
