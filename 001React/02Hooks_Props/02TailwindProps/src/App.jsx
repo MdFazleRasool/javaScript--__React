@@ -2,13 +2,13 @@ import './App.css'
 import Card from './Card'
 
 function App() {
-
+  let name = "mfrasool";
   return (
     < >
-      <h1   className='bg-green-400  p-4 rounded-xl text-black  mb-4'> Tailwind  test
-      </h1>
+      
 
-      <Card />
+      <Card  name={name} />
+      <Card  name="Md Fazle Rasool" />
     </>
   )
 }
