@@ -25,7 +25,10 @@ function App() {
 
   },[length,noAllowed,charAllowed,setPassword])  
 
-    
+    useEffect(() => {
+        passwordGenerator()
+    },[length,noAllowed,charAllowed,passwordGenerator])
+
   return (
     <>
 
