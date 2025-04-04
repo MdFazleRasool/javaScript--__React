@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 
-import { useState , useCallback, useEffect } from 'react'
+import { useState , useCallback, useEffect, useRef } from 'react'
 
 
 function App() {
@@ -29,6 +28,14 @@ function App() {
         passwordGenerator()
     },[length,noAllowed,charAllowed,passwordGenerator])
 
+    //ref hook
+    const copyref = useRef();
+
+    const copyPasswordToClipboard  = useCallback(() =>{
+      copyref.current?.select();
+      //copyref.current?.setSelectionRange(0,15);
+      window.navigator.clipboard.writeText(password)
+    },[password])
   return (
     <>
 
@@ -43,8 +50,9 @@ function App() {
           className="outline-none bg-white w-full mb-6 py-2 px-4 text-gray-900"
           placeholder="Generated password"
           readOnly
+          ref={copyref}
         />
-        <button className='outline-none bg-blue-700 text-white px-3 py-2 ml-0.5 mb-6 shrink-0'>
+        <button onClick={copyPasswordToClipboard} className='outline-none bg-blue-700 text-white px-3 py-2 ml-0.5 mb-6 shrink-0'>
             copy
         </button>
         </div>
@@ -54,7 +62,7 @@ function App() {
             <input 
               type='range'
               min={8}
-              max={20}
+              max={30}
               value={length}
               className='cursor-pointer'
               onChange={(e) => {setlength(e.target.value)}}
