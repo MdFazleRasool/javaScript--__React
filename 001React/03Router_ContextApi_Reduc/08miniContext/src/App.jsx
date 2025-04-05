@@ -1,10 +1,15 @@
-
+import Login from './components/Login'
+import Profile from './components/Profile'
+import UserContextProvider from './Context/UserContextProvider'
 function App() {
 
   return (
-    <>
-      <h1>hello</h1>
-    </>
+    <UserContextProvider>
+      <h1>Learning Context Api </h1>
+      <Login />
+      <Profile />
+
+    </UserContextProvider>
   )
 }
 
