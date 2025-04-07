@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { TodoProvider } from "./contexts";
 
 function App() {
@@ -20,6 +20,19 @@ function App() {
     setTodos((prev) => prev.map((prevTodo) => {prevTodo.id === id 
     ? {...prevTodo, completed : !prevTodo.completed} : prevTodo}))
   }
+
+  useEffect(() => {
+    const todos= JSON.prase(localStorage.getItem("todos"));
+    if(todos && todos.length > 0 ){
+      setTodos(todos);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos",JSON.stringify(todos));
+  },[todos]);
+  
+  
   return (
     <TodoProvider values={{todos,addTodo,updateTodo,deleteTodo,toggleComplete}}>
       <h6 className="text-3xl font bold underline 	bg-zinc-900 text-zinc-200 ">Learning Context API And Local Storage </h6>
