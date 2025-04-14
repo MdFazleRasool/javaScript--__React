@@ -1,6 +1,5 @@
 
 function App() {
-  
   return (
     <>
       <h1>A Blog App With  Appwrite</h1>
